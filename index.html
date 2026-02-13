@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AurielKay Investment</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family:'Lato', sans-serif; background:#0A1F44; color:white; }
+  header { padding:20px; text-align:center; background:#06142d; position:sticky; top:0; }
+  header h1 { font-family:'Montserrat',sans-serif; color:#FFD700; margin:0; }
+  nav { margin-top:10px; }
+  nav a { margin:0 10px; color:white; text-decoration:none; font-weight:bold; cursor:pointer; }
+  section { padding:50px 20px; text-align:center; }
+  section h2 { font-family:'Montserrat', sans-serif; color:#FFD700; margin-bottom:20px; }
+  blockquote { font-style:italic; color:#FFD700; max-width:600px; margin:20px auto; }
+  .hero { text-align:center; padding:50px 20px; }
+  .hero h2 { font-family:'Montserrat', sans-serif; font-size:28px; color:#FFD700; margin-bottom:10px; }
+  .hero p { max-width:600px; margin:10px auto; }
+  .hero button, .plan button, .dashboard button { padding:10px 20px; margin:10px; background:#FFD700; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
+  .plans { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .plan { background:#06142d; padding:20px; border-radius:10px; width:200px; }
+  .dashboard, .deposit, .withdraw, .admin { background:#06142d; padding:20px; border-radius:10px; max-width:600px; margin:auto; margin-bottom:50px; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AK AurielKay Investment</h1>
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('plans')">Plans</a>
+    <a onclick="showSection('dashboard')">Dashboard</a>
+  </nav>
+</header>
+
+<!-- Home / Hero Section -->
+<section id="home" class="hero">
+  <h2>Secure & Fast Crypto Investments</h2>
+  <p>Invest with BTC, USDT, or Gift Cards. Earn high returns with zero KYC.</p>
+  <button onclick="alert('Signup feature coming soon!')">Get Started</button>
+  <button onclick="alert('Login feature coming soon!')">Login</button>
+</section>
+
+<!-- About Section -->
+<section id="about" class="hidden">
+  <h2>About AurielKay Investment</h2>
+  <p>AurielKay Investment is built to help everyday people grow their wealth safely and securely. We focus on transparency, speed, and reliable returns while making crypto investment accessible.</p>
+  <blockquote>"The best investment you can make is in yourself." – Warren Buffett</blockquote>
+  <button onclick="showSection('plans')">Explore Investment Plans</button>
+</section>
+
+<!-- Investment Plans Section -->
+<section id="plans" class="hidden">
+  <h2>Investment Plans</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Starter</h3>
+      <p>Min: $100</p>
+      <p>Profit: 10%</p>
+      <p>Duration: 3 Days</p>
+      <button onclick="showSection('dashboard')">Invest Now</button>
+    </div>
+    <div class="plan">
+      <h3>Pro</h3>
+      <p>Min: $500</p>
+      <p>Profit: 25%</p>
+      <p>Duration: 7 Days</p>
+      <button onclick="showSection('dashboard')">Invest Now</button>
+    </div>
+    <div class="plan">
+      <h3>VIP</h3>
+      <p>Min: $2,000</p>
+      <p>Profit: 60%</p>
+      <p>Duration: 14 Days</p>
+      <button onclick="showSection('dashboard')">Invest Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Placeholder -->
+<section id="dashboard" class="hidden">
+  <h2>Welcome, John Doe</h2>
+  <div class="dashboard">
+    <p>Current Balance: $0.00</p>
+    <h3>Active Investments</h3>
+    <ul>
+      <li>Starter Plan - $100 invested - 10% profit</li>
+      <li>Pro Plan - $500 invested - 25% profit</li>
+    </ul>
+    <button onclick="showSection('deposit')">Deposit</button>
+    <button onclick="showSection('withdraw')">Withdraw</button>
+  </div>
+</section>
+
+<!-- Deposit Placeholder -->
+<section id="deposit" class="hidden">
+  <h2>Deposit Funds</h2>
+  <div class="deposit">
+    <p>Select Deposit Method:</p>
+    <button onclick="alert('BTC deposit placeholder')">Bitcoin (BTC)</button>
+    <button onclick="alert('USDT deposit placeholder')">USDT</button>
+    <button onclick="alert('Gift Card deposit placeholder')">Gift Card</button>
+    <button onclick="showSection('dashboard')">Back to Dashboard</button>
+  </div>
+</section>
+
+<!-- Withdraw Placeholder -->
+<section id="withdraw" class="hidden">
+  <h2>Withdraw Funds</h2>
+  <div class="withdraw">
+    <p>Enter Amount & Select Wallet (placeholder)</p>
+    <button onclick="alert('Withdrawal placeholder')">Submit</button>
+    <button onclick="showSection('dashboard')">Back to Dashboard</button>
+  </div>
+</section>
+
+<!-- Admin Panel Placeholder -->
+<section id="admin" class="hidden">
+  <h2>Admin Panel</h2>
+  <div class="admin">
+    <p>Manage Users / Deposits / Withdrawals (placeholder)</p>
+  </div>
+</section>
+
+<script>
+  function showSection(id) {
+    const sections = ['home','about','plans','dashboard','deposit','withdraw','admin'];
+    sections.forEach(sec => document.getElementById(sec).classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+    window.scrollTo(0,0);
+  }
+</script>
+
+</body>
+</html>
